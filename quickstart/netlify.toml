@@ -10,3 +10,10 @@ command = "hugo"
 
 [context.production.environment]
 HUGO_VERSION = "0.74.3"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag: noindex
+    X-Frame-Options: DENY
+    X-XSS-Protection: 1; mode=block
